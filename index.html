@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel ="web icon" type="icon" href="images/icon.png">
+  <title>CRUDS</title>
+</head>
+  <body>
+
+  <div class="mode">
+    <i class="moon fa-solid fa-moon"></i>
+  </div>
+
+  <div class="go-up">
+    <a href="#card"><i class="fa-solid fa-arrow-up"></i></a>
+  </div>
+
+
+    <!-- Start Crud -->
+    <div class="crud" id="card">
+      <!-- Start Head -->
+      <div class="head">
+        <h2>CRUDS</h2>
+        <p>Create || Read || Update || Delete || Search</p>
+      </div>
+      <!-- Start Head -->
+
+      <!-- Start Inputs -->
+      <div class="inputs">
+        <input type="text" id="title" placeholder="Title" required>
+        <div class="price">
+          <input onchange="getTotal()" onkeyup="getTotal()" type="number" id="price" placeholder="Price" required>
+          <input onchange="getTotal()" onkeyup="getTotal()" type="number" id="taxes" placeholder="Taxes">
+          <input onchange="getTotal()" onkeyup="getTotal()" type="number" id="ads" placeholder="ADS">
+          <input onchange="getTotal()" onkeyup="getTotal()" type="number" id="discount" placeholder="Discount">
+          <small class="total button" id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="Count (From 001 To 100)" required>
+        <input type="text" id="category" placeholder="Category" required>
+        <button class="button" id="submit">Create</button>
+      </div>
+      <!-- End Inputs -->
+
+      <div class="outputs">
+        <div class="search">
+          <input onkeyup="searchData(this.value)" type="text" class="search" id="search" placeholder="Search">
+          <div class="searchButton">
+            <button onclick="getSearchMode(this.id)" class="button" id="searchTitle">Search By Title</button>
+            <button onclick="getSearchMode(this.id)" class="button" id="searchCategory">Search By Category</button>
+          </div>
+        </div>
+
+        <div class="deleteAll" id="deleteAll"></div>
+          <div class="table">
+            <table>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Taxes</th>
+                <th>ADS</th>
+                <th>Discount</th>
+                <th>Total</th>
+                <th>Category</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </tr>
+
+              <tbody id="tbody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+    <!-- End Crud -->
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+/* Start General */
+:root{
+  --background-color: #222;
+  --secondary-color: #111;
+  --text-color: #fff;
+  --button-color: rgb(16, 48, 40);
+  --button-hover-color: rgb(25, 73, 62);
+  --total-color: #040;
+  --placeholder-color: #777;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  background-color: #ccc;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--button-color);
+}
+body{
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: system-ui;
+}
+.light{
+  --background-color: white;
+  --secondary-color: #ccc;
+  --text-color: #000;
+  --button-color: rgb(61, 148, 217);
+  --button-hover-color: rgb(55, 131, 191);
+  --total-color: rgb(76, 175, 80);
+  --placeholder-color: #000;
+}
+::placeholder{
+  color: var(--placeholder-color);
+}
+/* End General */
+/*----------------------------------------------------*/
+.button{
+  background-color: var(--button-color);
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px;
+  margin-block: 5px;
+  outline: none;
+  border: none;
+  border-radius: 7.5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button:hover{
+  background-color: var(--button-hover-color);
+}
+/*----------------------------------------------------*/
+/* Start Mode */
+.mode{
+  background-color: var(--secondary-color);
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: -7px;
+  top: -7px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+/* End Mode */
+/*----------------------------------------------------*/
+/* Start Go Up */
+.go-up{
+  background-color: var(--secondary-color);
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.3s;
+}
+.go-up.active{
+  pointer-events: fill;
+  opacity: 1;
+}
+.go-up a{
+  color: var(--text-color)
+}
+/* End Go Up */
+/*----------------------------------------------------*/
+/* Start Crud */
+.crud{
+  width: 80%;
+  margin: auto;
+}
+/* End Crud */
+/*----------------------------------------------------*/
+/* Start Head */
+.head{
+  text-align: center;
+  margin: 20px 0;
+}
+.head h2{
+  font-size: 30px;
+  margin: 5px 0;
+}
+.head p{
+  font-size: 20px;
+  margin: 5px 0;
+}
+/* End Head */
+/*----------------------------------------------------*/
+/* Start Inputs */
+.inputs input{
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 10px;
+  margin-block: 5px;
+  width: 100%;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 7.5px;
+  transition: 0.3s;
+}
+.inputs input:focus{
+  border-color: var(--text-color);
+}
+.inputs .price{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.inputs .price *{
+  flex: 1;
+}
+.inputs .price small::before{
+  content: "Total : ";
+}
+.inputs button{
+  font-size: 17.5px;
+  width: 100%;
+}
+.inputs .total{
+  transition: 0.3s;
+}
+/* End Inputs */
+/*----------------------------------------------------*/
+/* Start Outputs */
+.outputs .search input{
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 10px;
+  margin-block: 5px;
+  width: 100%;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 7.5px;
+  transition: 0.3s;
+}
+.outputs .search .searchButton{
+  display: flex;
+  justify-content: space-between;
+}
+.outputs .search button{
+  margin-block: 5px;
+  font-size: 15px;
+  width: 45%;
+}
+.outputs .deleteAll button{
+  font-size: 15px;
+  width: 100%;
+}
+/* End Outputs */
+/*----------------------------------------------------*/
+/* Start Table */
+.outputs .table{
+  overflow-x: auto;
+}
+.outputs table{
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+}
+.outputs table th,
+.outputs table td{
+  padding: 4px;
+}
+/* End Table */
